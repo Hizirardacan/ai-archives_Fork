@@ -3,7 +3,9 @@ import { parseHtmlToConversation } from '@/lib/parsers';
 import { dbClient } from '@/lib/db/client';
 import { s3Client } from '@/lib/storage/s3';
 import { CreateConversationInput } from '@/lib/db/types';
-import { createConversationRecord, getAllConversationRecords } from '@/lib/db/conversations';
+import { createConversationRecord} from '@/lib/db/conversations';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { getAllConversationRecords } from '@/lib/db/conversations';
 import { randomUUID } from 'crypto';
 import { loadConfig } from '@/lib/config';
 
@@ -125,6 +127,8 @@ export async function POST(req: NextRequest) {
  * - 400: { error: string } - Invalid request parameters
  * - 500: { error: string } - Server error
  */
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function GET(_req: NextRequest) {
   try {
 
