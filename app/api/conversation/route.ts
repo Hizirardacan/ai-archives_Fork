@@ -130,7 +130,7 @@ export async function GET(req: NextRequest) {
 
     //To work with empty Database Request
     return NextResponse.json(
-      { },
+      {},
       {
         status: 200,
         headers: {
@@ -139,6 +139,7 @@ export async function GET(req: NextRequest) {
       }
     );
 
+    /*
     // Initialize services on first request
     await ensureInitialized();
 
@@ -170,6 +171,7 @@ export async function GET(req: NextRequest) {
         },
       }
     );
+    */
   } catch (err) {
     console.error('Error retrieving conversations:', err);
     return NextResponse.json({ error: 'Internal error, see logs' }, { status: 500 });
