@@ -127,6 +127,18 @@ export async function POST(req: NextRequest) {
  */
 export async function GET(req: NextRequest) {
   try {
+
+    //To work with empty Database Request
+    return NextResponse.json(
+      { },
+      {
+        status: 200,
+        headers: {
+          'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
+        },
+      }
+    );
+
     // Initialize services on first request
     await ensureInitialized();
 
